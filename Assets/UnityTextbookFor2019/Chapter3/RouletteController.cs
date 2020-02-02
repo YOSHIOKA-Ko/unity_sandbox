@@ -12,9 +12,11 @@ public class RouletteController : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             this.rotateSpeed = 10;
-            Debug.Log("Set speed" + rotateSpeed);
+            Debug.Log("Set speed " + rotateSpeed);
         }
 
         transform.Rotate(0, 0, this.rotateSpeed);
+
+        this.rotateSpeed *= .96f;
     }
 }
