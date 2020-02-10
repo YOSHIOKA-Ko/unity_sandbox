@@ -8,6 +8,7 @@ public class ArrowController : MonoBehaviour
     [SerializeField] private ArrowController arrow;
     [SerializeField] private Camera mainCamera;
     [SerializeField] private PlayerController player;
+    [SerializeField] private ArrowRainGameDirector director;
 
     Rect viewPortRect = new Rect(0, 0, 1,1);
 
@@ -30,6 +31,7 @@ public class ArrowController : MonoBehaviour
 
         if (d < r1 + r2)
         {
+            director.GetComponent<ArrowRainGameDirector>() .DecreaseHp();
             Destroy(arrow.gameObject);
         }
     }
