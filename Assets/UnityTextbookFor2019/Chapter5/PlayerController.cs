@@ -18,4 +18,14 @@ public class PlayerController : MonoBehaviour
             player.transform.Translate(3, 0, 0);
         }
     }
+
+    public void LButtonDown()
+    {
+        player.transform.Translate(-3, 0, 0);
+    }
+
+    public void RButtonDown()
+    {
+        player.transform.Translate(3, 0, 0);
+    }
 }
