@@ -490,3 +490,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigid2D: {fileID: 1981428169}
+  sprite: {fileID: 1981428170}
