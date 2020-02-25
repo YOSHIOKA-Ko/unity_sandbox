@@ -344,6 +344,7 @@ GameObject:
   - component: {fileID: 1981428169}
   - component: {fileID: 1981428168}
   - component: {fileID: 1981428172}
+  - component: {fileID: 1981428174}
   - component: {fileID: 1981428173}
   m_Layer: 0
   m_Name: Cat
@@ -491,3 +492,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigid2D: {fileID: 1981428169}
   sprite: {fileID: 1981428170}
+  anim: {fileID: 1981428174}
+--- !u!95 &1981428174
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1981428167}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6e097872d5f5543c5806abf67b3fbe67, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

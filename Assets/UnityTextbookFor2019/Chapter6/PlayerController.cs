@@ -7,6 +7,7 @@ namespace UnityTextbookFor2019.Chapter6
     {
         [SerializeField] Rigidbody2D rigid2D;
         [SerializeField] SpriteRenderer sprite;
+        [SerializeField] Animator anim;
         float jumpForce = 680.0f;
         float walkForce = 30.0f;
         float maxWalkSpeed = 2.0f;
@@ -31,6 +32,8 @@ namespace UnityTextbookFor2019.Chapter6
 
             if (key == 1) sprite.flipX = false;
             if (key == -1) sprite.flipX = true;
+
+            anim.speed = speedx / 2.0f;
         }
 
         void OnValidate()
