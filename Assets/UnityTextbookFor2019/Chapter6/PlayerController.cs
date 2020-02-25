@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace UnityTextbookFor2019.Chapter6
 {
@@ -34,6 +35,11 @@ namespace UnityTextbookFor2019.Chapter6
             if (key == -1) sprite.flipX = true;
 
             anim.speed = speedx / 2.0f;
+        }
+
+        void OnTriggerEnter2D(Collider2D other)
+        {
+           Debug.Log("Clear");
         }
 
         void OnValidate()
