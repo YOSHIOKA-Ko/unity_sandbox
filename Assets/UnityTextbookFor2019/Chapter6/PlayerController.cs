@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace UnityTextbookFor2019.Chapter6
 {
@@ -39,7 +40,7 @@ namespace UnityTextbookFor2019.Chapter6
 
         void OnTriggerEnter2D(Collider2D other)
         {
-           Debug.Log("Clear");
+            SceneManager.LoadScene("UnityTextbookFor2019/Chapter6/Clear");
         }
 
         void OnValidate()
