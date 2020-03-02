@@ -16,7 +16,8 @@ namespace UnityTextbookFor2019.Chapter6
 
         void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space) &&
+                rigid2D.velocity.y == 0)
             {
                 rigid2D.AddForce(transform.up * jumpForce);
             }
@@ -36,6 +37,11 @@ namespace UnityTextbookFor2019.Chapter6
             if (key == -1) sprite.flipX = true;
 
             anim.speed = speedx / 2.0f;
+
+            if (transform.position.y < -10)
+            {
+                SceneManager.LoadScene("ClimbCloud");
+            }
         }
 
         void OnTriggerEnter2D(Collider2D other)
