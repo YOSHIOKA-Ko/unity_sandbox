@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace UnityTextbookFor2019.Chapter6
@@ -16,10 +15,20 @@ namespace UnityTextbookFor2019.Chapter6
 
         void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Space) &&
+            bool jump = anim.GetBool("Jump");
+
+            if (!jump &&
+                Input.GetKeyDown(KeyCode.Space) &&
                 rigid2D.velocity.y == 0)
             {
+                anim.SetBool("Jump", true);
                 rigid2D.AddForce(transform.up * jumpForce);
+            }
+
+            if (jump &&
+                rigid2D.velocity.y == 0)
+            {
+                anim.SetBool("Jump", false);
             }
 
             int key = 0;
@@ -36,7 +45,14 @@ namespace UnityTextbookFor2019.Chapter6
             if (key == 1) sprite.flipX = false;
             if (key == -1) sprite.flipX = true;
 
-            anim.speed = speedx / 2.0f;
+            if (jump)
+            {
+                anim.speed = 1.0f;
+            }
+            else
+            {
+                anim.speed = speedx / 2.0f;
+            }
 
             if (transform.position.y < -10)
             {
