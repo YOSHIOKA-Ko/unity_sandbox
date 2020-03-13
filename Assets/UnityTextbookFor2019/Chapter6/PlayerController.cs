@@ -18,15 +18,16 @@ namespace UnityTextbookFor2019.Chapter6
             bool jump = anim.GetBool("Jump");
 
             if (!jump &&
-                Input.GetKeyDown(KeyCode.Space) &&
-                rigid2D.velocity.y == 0)
+                rigid2D.velocity.y == 0 &&
+                Input.GetKeyDown(KeyCode.Space))
             {
                 anim.SetBool("Jump", true);
                 rigid2D.AddForce(transform.up * jumpForce);
             }
 
             if (jump &&
-                rigid2D.velocity.y == 0)
+                rigid2D.velocity.y == 0 &&
+                !Input.GetKey(KeyCode.Space))
             {
                 anim.SetBool("Jump", false);
             }
