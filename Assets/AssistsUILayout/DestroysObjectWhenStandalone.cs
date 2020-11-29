@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace PlatformDependentCompilation
+namespace AssistsUILayout
 {
     public class DestroysObjectWhenStandalone: MonoBehaviour
     {
